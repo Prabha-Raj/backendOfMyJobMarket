@@ -6,7 +6,7 @@ const JobRoute = express.Router();
 
 // route/paths
 JobRoute.route("/postjob").post(isAuthenticated,postJob);
-JobRoute.route("/getalljobs").get(isAuthenticated,getAllJobs);
+JobRoute.route("/getalljobs").get(getAllJobs);
 JobRoute.route("/getadminjobs").get(isAuthenticated,getAdminJobs);
 JobRoute.route("/getjobbyid/:id").get(isAuthenticated,getJobById);
 export default JobRoute
